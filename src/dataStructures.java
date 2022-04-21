@@ -78,20 +78,7 @@ public class dataStructures {
             System.out.println(m.getKey() + " " + m.getValue());
         }
 
-        //HASH TABLE
-        System.out.println();
-        System.out.println("__HASH TABLE__");
-        Hashtable<Integer, String> hashTable = new Hashtable<Integer, String>();
-        hashTable.put(100, "Lolita");
-        hashTable.put(102, "Summertime Sadness");
-        hashTable.put(101, "Born to Die");
-        hashTable.put(103, "Florida Kilos");
-        System.out.println("Before remove: " + hashTable);
-        hashTable.remove(101);
-        System.out.println("After remove: " + hashTable);
-        System.out.println(hashTable.getOrDefault(100, "Not found"));
-        System.out.println(hashTable.getOrDefault(104, "Not found"));
-        hashTable.putIfAbsent(105, "Diet Mountain Dew");
+
 
         //QUEUE
         System.out.println();
@@ -122,7 +109,51 @@ public class dataStructures {
         stk.push(72);
         System.out.println(stk.peek());
         stk.pop();
-        System.out.println(stk.peek()); 
+        System.out.println(stk.peek());
 
+        //HASHSET
+        System.out.println();
+        System.out.println("__HASHSET__");
+        HashSet<String> h = new HashSet<String>();
+        h.add("Lemur");
+        h.add("Orangutang");
+        h.add("Gorilla");
+        h.add("Spider Monkey");
+        System.out.println(h.isEmpty());
+        System.out.println(h.size());
+        System.out.println(h);
+        Iterator<String> hashsetIterator = h.iterator();
+        while(hashsetIterator.hasNext()) {
+            System.out.println(hashsetIterator.next());
+        }
+
+        //HASH TABLE
+        System.out.println();
+        System.out.println("__HASH TABLE__");
+        Hashtable<Integer, String> hashTable = new Hashtable<Integer, String>();
+        hashTable.put(100, "Lolita");
+        hashTable.put(102, "Summertime Sadness");
+        hashTable.put(101, "Born to Die");
+        hashTable.put(103, "Florida Kilos");
+        System.out.println("Before remove: " + hashTable);
+        hashTable.remove(101);
+        System.out.println("After remove: " + hashTable);
+        System.out.println(hashTable.getOrDefault(100, "Not found"));
+        System.out.println(hashTable.getOrDefault(104, "Not found"));
+        hashTable.putIfAbsent(105, "Diet Mountain Dew");
+
+
+        //HASH MAP
+        System.out.println();
+        HashMap<Integer, String> angularDevelopers = new HashMap<Integer, String>();
+        angularDevelopers.put(1, "Farhan");
+        angularDevelopers.put(2, "Baris");
+        angularDevelopers.put(3, "Oguz");
+        angularDevelopers.put(4, "Enver");
+        angularDevelopers.put(5, "Ege");
+        angularDevelopers.put(6, "Berk");
+
+        for (Map.Entry entry : angularDevelopers.entrySet())
+            System.out.println(entry.getKey() + " - " + entry.getValue());
     }
 }
